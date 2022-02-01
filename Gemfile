@@ -47,9 +47,6 @@ gem "bootsnap", require: false
 # gem "image_processing", "~> 1.2"
 
 
-group :production do
-  gem "pg"
-end
 
 group :development, :test do
   gem "sqlite3"
@@ -72,5 +69,10 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
+end
+
+group :production do
+  gem 'pg', '0.15.1'
+  gem 'rails_12factor'
 end
 
