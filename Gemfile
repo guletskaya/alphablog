@@ -46,6 +46,11 @@ gem "bootsnap", require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
+
+group :production do
+  gem "pg"
+end
+
 group :development, :test do
   gem "sqlite3", "~> 1.4"
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
@@ -69,6 +74,3 @@ group :test do
   gem "webdrivers"
 end
 
-group :production do
-  gem "pg"
-end
