@@ -48,8 +48,7 @@ gem "bootsnap", require: false
 
 
 
-group :development, :test do
- 
+group :development do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
   gem 'sqlite3', '~> 1.4'
 end
@@ -72,7 +71,7 @@ group :test do
   gem "webdrivers"
 end
 
-group :production do
+group :test, :production do
   gem 'pg'
 end
 
