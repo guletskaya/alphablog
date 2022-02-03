@@ -9,7 +9,7 @@ gem "rails", "~> 7.0.1"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
-
+gem 'bootstrap', '~> 5.1.3'
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
 
@@ -17,7 +17,7 @@ gem "puma", "~> 5.0"
 gem "importmap-rails"
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
-gem "turbo-rails"
+gem "turbo-rails", '~> 1.0.0'
 
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
@@ -41,14 +41,14 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 
 # Use Sass to process CSS
-# gem "sassc-rails"
+gem "sassc-rails"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
 
 
-group :development do
+group :test, :development do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
   gem 'sqlite3', '~> 1.4'
 end
@@ -71,7 +71,8 @@ group :test do
   gem "webdrivers"
 end
 
-group :test, :production do
+group :production do
   gem 'pg'
 end
 
+gem 'cssbundling-rails'
